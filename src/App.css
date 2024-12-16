@@ -1,38 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f8fafc;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  background-color: white;
+  border-color: #e5e7eb;
+}
+
+/* Header row styling */
+tr:first-child td {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* First column styling */
+td:first-child {
+  background-color: #f9fafb;
+  font-weight: 500;
+}
+
+/* Document header styling */
+.document-header {
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
